@@ -1,0 +1,13 @@
+rank,model
+1,higgs-llama-3-70b
+2,gpt-4-1106-preview
+3,gemini-1.5-pro-001
+4,llama-3-70b-instruct
+5,llama-3.1-70b-instruct
+6,gpt-4o
+7,llama-3-1-405b-instruct-fp8
+8,qwen-2-72b-instruct
+9,llama3.1-8B-instruct
+10,claude-3.5-sonnet-20240620
+11,yi-large
+12,mistral-large-2402

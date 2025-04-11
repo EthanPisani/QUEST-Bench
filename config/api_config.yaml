@@ -5,6 +5,154 @@
 #           api_key: str
 #           api_version: str optional (only for azure)
 
+# llama3.1-8B-instruct:
+#     model_name: llama3.1-8B-instruct
+#     beautiful_name: Llama-3.1 8B Instruct
+#     endpoints: http://127.0.0.1:5008/v1/chat/completions
+#     api_type: tabbyAPI
+
+llama3.1-8B-instruct:
+    model_name: meta-llama/llama-3.1-8b-instruct
+    beautiful_name: Llama-3.1 8B Instruct
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+
+deepseek-llama3-8B-instruct:
+    model_name: deepseek-llama3-8B-instruct
+    beautiful_name: DeepSeek Llama-3 8B Instruct 
+    endpoints: http://127.0.0.1:5009/v1/chat/completions
+    api_type: tabbyAPI
+
+phi-3-mini:
+    model_name: phi-3-mini
+    beautiful_name: Phi-3 Mini 128k Instruct
+    endpoints: http://127.0.0.1:5009/v1/chat/completions
+    api_type: tabbyAPI
+
+gemma-2-9b-sppo-iter3:
+    model_name: gemma-2-9b-sppo-iter3
+    beautiful_name: Gemma-2 9B SPPO Iter3
+    endpoints: http://127.0.0.1:5009/v1/chat/completions
+    api_type: tabbyAPI
+
+yi-34b:
+    model_name: yi-34b
+    beautiful_name: Yi 34B
+    endpoints: http://127.0.0.1:5009/v1/chat/completions
+    api_type: tabbyAPI
+higgs-llama-3-70b:
+    model_name: higgs-llama-3-70b
+    beautiful_name: Higgs-Llama-3 70B V1 3.5bpw
+    endpoints: http://127.0.0.1:5009/v1/chat/completions
+    api_type: tabbyAPI
+
+
+mythomax-13b:
+    model_name: gryphe/mythomax-l2-13b
+    beautiful_name: Mythomax 13B
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+qwq-32b:
+    model_name: qwq-32b
+    beautiful_name: Qwen QwQ 32B
+    endpoints: http://127.0.0.1:5009/v1/chat/completions
+    api_type: tabbyAPI
+
+qwen-2.5-72b-instruct:
+    model_name: qwen/qwen-2.5-72b-instruct
+    beautiful_name: Qwen 2.5 72B Instruct
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+
+gemini-2.0-flash:
+    model_name: google/gemini-2.0-flash-001
+    beautiful_name: Gemini 2.0 Flash
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+wizardlm-2-8x22b:
+    model_name: microsoft/wizardlm-2-8x22b
+    beautiful_name: WizardLM-2 8x22B
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+deepseek-v3:
+    model_name: deepseek/deepseek-chat
+    beautiful_name: DeepSeek V3
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+deepseek-v3-0324:
+    model_name: deepseek-chat
+    beautiful_name: DeepSeek V3 (0324)
+    endpoints: 
+        api_base: https://api.deepseek.com/v1
+        api_key: 
+    api_type: openai
+
+minimax-01:
+    model_name: minimax/minimax-01
+    beautiful_name: MiniMax 01
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+llama-3.1-70b-instruct:
+    model_name: meta-llama/llama-3.1-70b-instruct
+    beautiful_name: Llama-3.1 70B Instruct
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+llama-3-70b-instruct:
+    model_name: meta-llama/llama-3-70b-instruct
+    beautiful_name: Llama-3 70B Instruct
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+llama-3.2-3b-instruct:
+    model_name: meta-llama/llama-3.2-3b-instruct
+    beautiful_name: Llama-3.2 3B Instruct
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+qwen-2-72b-instruct:
+    model_name: qwen/qwen-2-72b-instruct
+    beautiful_name: Qwen 2 72B Instruct
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+gemini-flash-1.5-8b:
+    model_name: google/gemini-flash-1.5-8b
+    beautiful_name: Gemini Flash 1.5 8B
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+
+
 gpt-3.5-turbo-0125:
     model_name: gpt-3.5-turbo-0125
     beautiful_name: GPT-3.5 Turbo (0125)
@@ -18,26 +166,75 @@ gpt-4-0314:
     api_type: openai
 
 gpt-4-1106-preview:
-    model_name: gpt-4-1106-preview
+    model_name: openai/gpt-4-1106-preview
     beautiful_name: GPT-4-Turbo (1106 Preview)
-    endpoints: null
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
     api_type: openai
 
 gpt-4o:
-    model_name: gpt-4o-2024-05-13
+    model_name: openai/gpt-4o-2024-05-13
     beautiful_name: GPT-4o (2024-05-13)
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+
+gpt-4o:
+    model_name: openai/gpt-4o-2024-05-13
+    beautiful_name: GPT-4o (2024-05-13)
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+quasar-alpha:
+    model_name: openrouter/quasar-alpha
+    beautiful_name: Quasar Alpha
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+gpt-4o-mini:
+    model_name: openai/gpt-4o-mini-2024-07-18
+    beautiful_name: GPT-4o Mini (2024-07-18)
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+o3-mini:
+    model_name: o3-mini
+    beautiful_name: O3 Mini (2025-01-31)
     endpoints: null
     api_type: openai
 
 claude-3-opus:
-    model_name: claude-3-opus-20240229
-    beautiful_name: Claude-3 Opus (2024-02-29)
-    api_type: anthropic
+    model_name: anthropic/claude-3-opus
+    beautiful_name: Claude-3 Opus (2024-06-20)
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
 
 claude-3-5-sonnet:
-    model_name: claude-3-5-sonnet-20240620
+    model_name: anthropic/claude-3.5-sonnet
+    beautiful_name: Claude-3.5 Sonnet (2024-10-22)
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
+
+claude-3.5-sonnet-20240620:
+    model_name: anthropic/claude-3.5-sonnet-20240620
     beautiful_name: Claude-3.5 Sonnet (2024-06-20)
-    api_type: anthropic
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
 
 higgs-llama-3-70b-240601:
     model_name: higgs-llama-3-70b-240601
@@ -56,60 +253,82 @@ higgs-llama-3-70b-240629-v2:
     api_type: openai
 
 deepseek-v2:
-    model_name: deepseek-chat
+    model_name: deepseek-v2
     beautiful_name: DeepSeek-V2 (2024-06-28)
     endpoints:
         api_base: https://api.deepseek.com/v1
-        api_key:
+        api_key: 
     api_type: openai
 
 minimax-abab-6.5s:
     model_name: abab6.5s-chat
     beautiful_name: MiniMax abab6.5s
     endpoints:
-        api_base:
-        api_key:
-    api_type: openai
+        api_base: https://api.aimlapi.com/v1
+        api_key: 
+    api_type: aimlapi
 
 mistral-large-2402:
-    model_name: mistral-large-2402
+    model_name: mistralai/mistral-large
     beautiful_name: Mistral Large (2024-02)
-    endpoints:
-        api_base: https://api.mistral.ai/v1/
-        api_key:
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
     api_type: openai
 
 gemini-1.5-pro:
-    model_name: gemini-1.5-pro
+    model_name: google/gemini-pro-1.5
     beautiful_name: Gemini 1.5 Pro
-    endpoints:
-        api_base:
-        api_key:
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
     api_type: openai
 
+gemini-1.5-pro-001:
+    model_name: gemini-1.5-pro-001
+    beautiful_name: Gemini 1.5 Pro 001
+    # endpoints:
+    #     api_base: 
+    #     api_key:
+    api_type: gemini
 yi-large:
-    model_name: yi-large
+    model_name: 01-ai/yi-large
     beautiful_name: Yi Large (2024-05-13)
-    endpoints:
-        api_base: https://api.lingyiwanwu.com/v1/
-        api_key:
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
     api_type: openai
 
-qwen2-72b-instruct:
-    beautiful_name: Qwen2 72B Instruct
+deepseek-r1:
+    model_name: deepseek-reasoner
+    beautiful_name: DeepSeek-R1 (2024-06-28)
+    endpoints: 
+        api_base: https://api.deepseek.com/v1
+        api_key: 
+    api_type: openai
 
-llama-3-70b-instruct:
-    beautiful_name: Llama-3 70B Instruct
 
-llama-3-1-70b-instruct:
-    beautiful_name: Llama-3.1 70B Instruct
 
-llama-3-1-8b-instruct:
-    beautiful_name: Llama-3.1 8B Instruct
+# qwen2-72b-instruct:
+#     beautiful_name: Qwen2 72B Instruct
+
+# llama-3-70b-instruct:
+#     beautiful_name: Llama-3 70B Instruct
+
+# llama-3-1-70b-instruct:
+#     beautiful_name: Llama-3.1 70B Instruct
+
+# llama-3-1-8b-instruct:
+#     beautiful_name: Llama-3.1 8B Instruct
 
 llama-3-1-405b-instruct-fp8:
+    model_name: meta-llama/llama-3.1-405b-instruct
     beautiful_name: Llama-3.1 405B Instruct (FP8)
+    endpoints: # open router
+        api_base: https://openrouter.ai/api/v1
+        api_key: 
+    api_type: openai
 
-character-AI:
-    beautiful_name: Character.AI 
-    api_type: character_ai
+# character-AI:
+#     beautiful_name: Character.AI 
+#     api_type: character_ai

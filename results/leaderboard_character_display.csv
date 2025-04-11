@@ -1,0 +1,13 @@
+rank,Model,Average Score,Contextual_Alignment,Character_Consistency,Descriptive_Depth,Role_Specific_Knowledge,Engagement_and_Collaboration,Creativity_and_Emotional_Nuance
+1,GPT-4-Turbo (1106 Preview),21.35,3.79,4.0,2.61,3.34,3.99,3.63
+2,Llama-3.1 405B Instruct (FP8),21.33,3.79,4.01,2.57,3.33,3.98,3.65
+3,Llama-3.1 70B Instruct,21.27,3.77,3.98,2.55,3.3,3.95,3.61
+4,Llama-3 70B Instruct,21.2,3.77,3.97,2.53,3.29,3.93,3.61
+5,Qwen 2 72B Instruct,21.11,3.72,3.92,2.57,3.29,3.93,3.57
+6,Llama-3.1 8B Instruct,21.0,3.74,3.95,2.54,3.29,3.92,3.58
+7,Higgs-Llama-3 70B V1 3.5bpw,20.99,3.83,4.03,2.48,3.27,3.93,3.46
+8,Yi Large (2024-05-13),20.99,3.66,3.89,2.69,3.34,3.88,3.53
+9,Claude-3.5 Sonnet (2024-06-20),20.88,3.68,3.89,2.59,3.28,3.88,3.56
+10,GPT-4o (2024-05-13),20.66,3.66,3.87,2.53,3.26,3.83,3.52
+11,Mistral Large (2024-02),20.33,3.53,3.73,2.58,3.17,3.82,3.49
+12,Gemini 1.5 Pro 001,20.22,3.63,3.8,2.53,3.12,3.69,3.45
