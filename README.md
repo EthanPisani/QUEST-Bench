@@ -1,9 +1,6 @@
-# RPBench-Auto
-[Leaderboard](https://boson.ai/rpbench/) | [Blog](https://boson.ai/rpbench-blog/)
+# Quest-Bench
 
 An automated pipeline for evaluating LLMs for role-playing.
-
-![RPBench Auto](./figures/rpbench_auto_example.png)
 
 ## Installation
 ```bash
@@ -11,26 +8,55 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-First, set the environment variable `OPENAI_API_KEY` for the judge model and  to the path of the RPBench dataset.
+Run the evaluation scripts for each roleplay type. Replace `[model]` with the name of the model you want to evaluate.
+You will need to edit api_config.yml for your configuration.
+
+**Scene Evaluation:**
+
 ```bash
-export OPENAI_API_KEY=<API_KEY>
+python run_iter_scene_eval.py --model [model] 
 ```
 
-Then, add the model config file for the model you want to evaluate. Currently we support OpenAI API (and compatible APIs) and Anthropic API. Edit [config/api_config.yaml](config/api_config.yaml) to add the model config.
+**Character Evaluation:**
 
-Finally, run the pipeline.
 ```bash
-python run_character_eval.py --model_1 <CONFIG_NAME>  # Evaluate the model on the character subset
-python run_scene_eval.py --model_1 <CONFIG_NAME>  # Evaluate the model on the scene subset
+python run_iter_character_eval.py --model [model]
 ```
 
-Generate the leaderboard.
+**Extract Responses:**
+
+After running the evaluation scripts, extract the responses:
+
 ```bash
-python generate_leaderboard.py
+python extract_rankings.py --input_dir results/scene --output_dir responses/scene
+python extract_rankings.py --input_dir results/character --output_dir responses/character
 ```
 
-## How to contribute
-After running all commands above, you can add your model to the leaderboard by creating a pull request with the updated leaderboard files, `leaderboard.csv` and `leaderboard_for_display.csv`, plus the .jsonl files in `/results/character` and `/results/scene`. The leaderboard will be updated automatically when the PR is merged.
+**Score Responses:**
+
+Finally, score the responses:
+
+```bash
+python score_responses.py --input_dir responses/scene --output_dir scored/scene --roleplay_type scene
+python score_responses.py --input_dir responses/character --output_dir scored/character --roleplay_type character 
+```
+
+## Generating the Leaderboard and Graphic
+
+To generate the leaderboard and graphic:
+
+```bash
+python iter_generate_leaderboard_combined.py --result_dir scored
+python iter_generate_lead_graphic_combined.py --result_dir scored
+```
+
+## View Results
+
+To view the leaderboard:
+
+*   Leaderboard files in the `scored` directory, `leaderboard_character_percent.csv` and `leaderboard_combined_display.csv`.
+*   The response files in `/results/character` and `/results/scene`. 
 
 ## Acknowledgements
-This benchmark is heavily inspired by [ArenaHard](https://github.com/lm-sys/arena-hard-auto) and [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/). Some code implementations are borrowed from these repositories.
+
+This benchmark is heavily inspired by [RPBench-Auto](https://github.com/boson-ai/RPBench-Auto), [ArenaHard](https://github.com/lm-sys/arena-hard-auto) and [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/). Some code implementations are borrowed from these repositories.
