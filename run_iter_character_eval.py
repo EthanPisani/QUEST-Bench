@@ -166,10 +166,11 @@ def benchmark_single_model(model, num_runs=1, limit=None):
                 response = chat_completion(candidate_config[model], conversation.copy())
                 
                 # Evaluate the response
-                score, scores = evaluate_response(
-                    evaluator_model, npc_profile, response, request
-                )
-                
+                # score, scores = evaluate_response(
+                #     evaluator_model, npc_profile, response, request
+                # )
+                score, scores = 0, {key: 0 for key in CRITERIA}
+
                 # Store request response results
                 request_result = {
                     "npc_profile": npc_profile,
